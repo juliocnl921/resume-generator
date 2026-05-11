@@ -1,0 +1,35 @@
+{
+    "fullname": "Jhon doe",
+    "title": "Developer | Full Stack | UX | Frontend",
+    "summary": "Im a software developer with expereince in front and back in many diferent areas.",
+    "contact_title": "Contact",
+    "phone": "+52 000 000 0000",
+    "email": "jhon.doe@mail.com",
+    "profile": "www.linkedin.com/in/jhondoe/",
+    "skills_title": "Skills",
+    "skills": ["Python", "SQL","Node.js","React", "Angular", "Vue", "Java", "GIT", "SCRUM"],
+    "experience_title": "Experience",
+    "experience": [
+        {"start":"2000","end":"2010",
+         "company":"Healthcare Center",
+         "role": "FullStack Developer",
+         "bullets": ["I Developed the bakend of healthcare system","I working in a retail system using microservices in python"]
+        },
+        {"start":"2010","end":"2026",
+         "company":"Web systems org",
+         "role": "FrontEnd Developer",
+         "bullets": ["I was working in a ux of a big retail system, i worked with javascript and html", "I design many ux for some pages"]
+        }
+    ],
+    "education_title": "Education",
+    "education": [
+        {"start":"2000","end":"2005",
+         "school":"UNAM",
+         "degree": "Software development engineering"
+        },
+        {"start":"2022","end":"2022",
+         "school":"ScrumStudy",
+         "degree": "Scrum Certificate"
+        }
+    ]
+ }

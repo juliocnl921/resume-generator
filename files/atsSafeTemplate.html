@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>{{fullname}}</title>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    font-size: 11pt;
+    line-height: 1.5;
+    color: #000;
+    margin: 5mm;
+  }
+
+  h1 {
+    font-size: 20pt;
+    margin-bottom: 5px;
+  }
+
+  h2 {
+    font-size: 14pt;
+    margin-top: 18px;
+    margin-bottom: 6px;
+    border-bottom: 1px solid #000;
+    padding-bottom: 2px;
+
+    page-break-after: avoid;
+    break-after: avoid;
+    page-break-inside: avoid;
+  }
+
+  p {
+    margin: 3px 0;
+  }
+
+  .summary {
+    text-align: justify;
+  }
+
+  .contact {
+    font-size: 10pt;
+  }
+
+  .job {
+    page-break-inside: avoid;
+    break-inside: avoid;
+    margin-bottom: 10px;
+  }
+
+  .bullet {
+    margin-left: 10px;
+    text-indent: -10px;
+    font-size: 10pt;
+
+    /* evita cortes feos */
+    page-break-inside: avoid;
+  }
+
+  .section-title {
+    page-break-after: avoid;
+  }
+
+  .education-content {
+    font-size: 10pt;
+    page-break-inside: avoid;
+  }
+
+  /* evita separación fea entre título y contenido */
+  h2 + p,
+  h2 + div {
+    page-break-before: avoid;
+  }
+
+  @page {
+    margin: 20mm;
+  }
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<h1>{{fullname}}</h1>
+<p><strong>{{title}}</strong></p>
+<p class="summary">{{summary}}</p>
+
+<!-- CONTACT -->
+<h2 class="section-title">{{contact_title}}</h2>
+<p class="contact">
+  {{email}}<br>
+  {{phone}}<br>
+  {{profile}}
+</p>
+
+<!-- EXPERIENCE -->
+<h2 class="section-title">{{experience_title}}</h2>
+{% for job in experience %}
+<div class="job">
+  <p>
+    <strong>{{ job.role }}</strong> — {{ job.company }} ({{ job.start }} - {{ job.end }})
+  </p>
+
+  {% if job.bullets %}
+    {% for bullet in job.bullets %}
+      {% if bullet %}
+        <p class="bullet">• {{ bullet }}</p>
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+
+</div>
+{% endfor %}
+
+<!-- SKILLS -->
+<h2 class="section-title">{{skills_title}}</h2>
+<p>
+{% for skill in skills %}
+  {{ skill }}{% if not loop.last %}, {% endif %}
+{% endfor %}
+</p>
+
+<!-- EDUCATION -->
+<h2 class="section-title">{{education_title}}</h2>
+{% for edu in education %}
+<p class="education-content">
+  <strong>{{ edu.degree }}</strong> - {{ edu.school }} (
+    {% if edu.start == edu.end %}
+      {{ edu.start }}
+    {% else %}
+      {{ edu.start }} - {{ edu.end }}
+    {% endif %}
+  )
+</p>
+{% endfor %}
+
+</body>
+</html>
