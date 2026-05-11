@@ -1,8 +1,16 @@
 # resume-generator
-AI-powered resume generator that adapts your experience to any job description and outputs a ready-to-send PDF.
+AI-powered resume utility to adapts your experience and skills to any job description and outputs a ready-to-send PDF.
 
-This repo contains a comand line tool script to generate outputs and a service with API endpoints to use via HTTP.
+This repo includes a command-line tool for local use and an HTTP service with API endpoints for integration into other applications.
 
+## Contents
+
+| File | Description |
+|------|-------------|
+| `CVUtils.py` | Core utility functions for resume filtering, rendering, and PDF generation |
+| `example.py` | Minimal example showing how to use `CVUtils.py` directly |
+| `local.py` | Command-line tool for quick local PDF generation |
+| `service.py` | Flask API service to expose the utilities as HTTP endpoints |
 
 ## Requirements
 - Python 3.8+
