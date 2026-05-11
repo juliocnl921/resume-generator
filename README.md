@@ -22,6 +22,7 @@ python3 -m venv .venv
 source .venv/bin/activate (.venv/Scripts/Activate.ps1 in windows powershell)
 pip install -r requirements.txt
 ```
+Add an `OPENAI_API_KEY` environment variable with your OpenAI API key.
 
 ## Usage as comand line tool
 python local.py model[mini |nano | full] outputs[all | html| pdf] language[es | en]
