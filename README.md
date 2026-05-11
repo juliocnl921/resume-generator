@@ -1,7 +1,7 @@
 # resume-generator
 AI-powered resume utility to adapts your experience and skills to any job description and outputs a ready-to-send PDF.
 
-This repo includes a command-line tool for local use and an HTTP service with API endpoints for integration into other applications.
+This repo includes a utility library for resume adaptation, a command-line tool for local use, and an HTTP service for integration into other applications.
 
 ## Contents
 
@@ -45,12 +45,12 @@ fill the resume data in files/resume.json
 
 activate environment and then execute:
 ```bash
-python run.py nano all en
+python local.py nano all en
 ```
 
 ## Example usage in local only filter and fill html template
 ```bash
-python run.py nano html en
+python local.py nano html en
 ```
 
 ## usage as API Endpoints
