@@ -3,6 +3,8 @@ AI-powered resume utility to adapts your experience and skills to any job descri
 
 This repo includes a utility library for resume adaptation, a command-line tool for local use, and an HTTP service for integration into other applications.
 
+These utilities use OpenAI models during the filtering stage, so an OpenAI API key is required.
+
 To run it locally in a simple way, you can execute the `local.py` script.
 
 The process consists of 3 main steps:
@@ -45,6 +47,7 @@ The process consists of 3 main steps:
 ## Requirements
 - Python 3.8+
 - GTK runtime (https://github.com/tschoonj/GTK-for-Windows-Runtime-Environment-Installer/releases)
+- OpenAI API key.
 
 ## Setup
 ```bash
