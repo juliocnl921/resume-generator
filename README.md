@@ -3,6 +3,36 @@ AI-powered resume utility to adapts your experience and skills to any job descri
 
 This repo includes a utility library for resume adaptation, a command-line tool for local use, and an HTTP service for integration into other applications.
 
+To run it locally in a simple way, you can execute the `local.py` script.
+
+The process consists of 3 main steps:
+
+1. **Experience adaptation**
+   
+   **Input:**
+   - JSON object with your experience data
+   - Job description
+
+   **Output:**
+   - JSON object with your experience data adapted to the job posting
+
+2. **HTML generation**
+   
+   **Input:**
+   - JSON object with your experience data
+   - Jinja2 template using an ATS-friendly format
+
+   **Output:**
+   - Jinja2 template rendered as HTML
+
+3. **PDF generation**
+   
+   **Input:**
+   - Jinja2 template rendered as HTML
+
+   **Output:**
+   - HTML rendered as PDF
+
 ## Contents
 
 | File | Description |
