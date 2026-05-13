@@ -54,21 +54,47 @@ pip install -r requirements.txt
 ```
 Add an `OPENAI_API_KEY` environment variable with your OpenAI API key.
 
-## Usage as comand line tool
-python local.py model[mini |nano | full] outputs[all | html| pdf] language[es | en]
+## Usage
 
-Params: 
-    model:
-        mini: Short alias for gpt-5-mini to filter
-        nano: Short alias for gpt-5.4-nano to filter
-        full: Short alias for gpt-5.4 to filter
-    outputs:
-        all: Filter resume.cv with position.txt content > fill html template with the previous output > render pdf file
-        html: filter resume.cv with position.txt content > fill html template with the previous output 
-        pdf: take a previous redered output html file > render pdf file
-    language:
-        es: Force to ouput in spanish
-        en: Force to ouput in english
+### Command Line
+
+```bash
+python local.py <model> <output> <language>
+```
+
+### Parameters
+
+#### `model`
+Model used to adapt the resume content.
+
+| Value | Description |
+|---|---|
+| `mini` | Alias for `gpt-5-mini` |
+| `nano` | Alias for `gpt-5.4-nano` |
+| `full` | Alias for `gpt-5.4` |
+
+#### `output`
+Defines which stages of the pipeline will be executed.
+
+| Value | Description |
+|---|---|
+| `all` | Filter `resume.cv` using `position.txt`, render the HTML template, and generate the final PDF |
+| `html` | Filter `resume.cv` using `position.txt` and render the HTML template |
+| `pdf` | Take a previously rendered HTML file and generate the PDF |
+
+#### `language`
+Forces the output language.
+
+| Value | Description |
+|---|---|
+| `es` | Output in Spanish |
+| `en` | Output in English |
+
+### Example
+
+```bash
+python local.py mini all en
+```
 
 ## Example as comand line tool for all stages
 fill the position content in files/position.txt
