@@ -1,9 +1,3 @@
-CONTEXT_ = """Genera un nuevo CV ajustando lo necesario para MAXIMIZAR la compatibilidad entre la vacante y la posición.
-Usa palabras clave para la posición para pasar filtros ATS.
-Si es necesario, puedes quitar elementos irrelevantes.
-Puedes ordenar las skills mas relevantes para la vacante.
-Es extrictamente necesario que SOLAMENTE respondas el contenido en FORMATO JSON y con EXACTAMENTE los mismos campos."""
-
 CONTEXT = """Genera un CV optimizado para la vacante.
 
 OBJETIVO:

@@ -7,6 +7,8 @@ These utilities use OpenAI models during the filtering stage, so an OpenAI API k
 
 To run it locally in a simple way, you can execute the `local.py` script.
 
+You can check the `example.py` file to get a general idea of how to use the functions.
+
 The process consists of 3 main steps:
 
 1. **Experience adaptation**
